@@ -1,0 +1,38 @@
+<html>
+	<body>
+		
+		<input type="text" id="num1" onkeyup="getSquare()"/>
+		
+		<br/>
+		
+		<input type="text" id="num2"/>
+		
+		
+		
+		<br/>
+		<input type="text" id="number1"/>
+		<input type="text" id="number2"/>
+		<button onclick="getAdd()">GET ADDITION</button>
+		<input type="text" id="number3"/>
+		<div id="result">Addition will come here</div>
+	</body>
+	
+	<script>
+		function getSquare() {
+			var x = document.getElementById("num1").value;
+			console.log(typeof(x));
+			console.log(`Square of ${x} is ${x * x}`);
+			document.getElementById("num2").value = x * x;
+		}
+		
+		/* WAP to read 2 number and print addition in textbox */
+		
+		function getAdd(){
+			var x = parseInt(document.getElementById("number1").value);
+			var y = parseInt(document.getElementById("number2").value);
+			document.getElementById("number3").value = x + y;
+			
+			document.getElementById("result").innerHTML = x + y;
+		}
+	</script>
+</html>

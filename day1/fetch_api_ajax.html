@@ -1,0 +1,41 @@
+<html>
+
+	<body>
+	
+		<table border=1>
+			<thead>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Username</th>
+				<th>Phone</th>
+			</thead>
+			<tbody id="result">
+			</tbody>
+		</table>
+	
+	</body>
+	
+</html>
+
+<script>
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(data => {
+		
+		output_str = "";
+		
+		data.forEach((rec) => {
+			output_str += `<tr>`
+			output_str += `<td>${rec.id}</td>`;
+			output_str += `<td>${rec.name}</td>`;
+			output_str += `<td>${rec.username}</td>`;
+			output_str += `<td>${rec.phone}</td>`;
+			output_str += `</tr>`
+		});
+		
+		document.getElementById("result").innerHTML = output_str;
+		
+		console.log(data)
+	});
+</script>

@@ -1,0 +1,58 @@
+Day 1: JavaScript
+Introduction
+console.log()
+console.error()
+console.warning()
+alert()
+confirm()
+
+variables, datatypes and scope
+var x | let x | x
+
+concatenation
+template literals `hello ${name}`
+
+Conditional Statement if..else
+
+Loops for
+
+String and String methods
+
+Array and Array methods
+
+Math methods
+
+Functions
+
+callback function
+
+lambda expression/fatarrow function
+
+Classes and Objects
+
+Array of Objects
+
+Inheritance
+
+Abstract Class
+
+Interface
+
+JSON
+
+Array of JSON
+
+AJAX using fetch API and json-placeholder dummy API
+
+UI
+read data from input box
+put data in input box
+put data in html
+
+addEventListener
+
+events (onclick, onkeyup, onkeydown, onkeypress, onfocus, onchange, onblur)
+
+JavaScript Validation
+=====================================================================
+Load data in table from API (Web Service: json-placeholder) using AJAX call (fetch API)

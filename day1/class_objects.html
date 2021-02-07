@@ -1,0 +1,82 @@
+<script>
+
+/*
+PascalCase 	: ClassName
+snake_case 	: variable_name
+CONSTANT 	: CONSTANT_VAL
+camelCase	: functionName()
+kebab-case	: file-name.ext
+*/
+
+/*
+	class Bank with construtor(initial_balance)
+	balance
+	
+	deposit(amt)
+	withdraw(amt)
+	showBalance()
+*/
+
+class Bank {
+
+	constructor(i_b) {
+		this.balance = i_b;
+	}
+
+	deposit(amt) {
+		this.balance += amt;
+	}
+	
+	withdraw(amt) {
+		this.balance -= amt;
+	}
+	
+	showBalance() {
+		console.log(`Current Balance: ${this.balance}`);
+	}
+
+}
+
+
+class HDFC extends Bank {
+	constructor(i_b) {
+		super(i_b);
+	}
+	
+	withdraw(amt) {
+		this.balance = (this.balance - amt) - 20;
+	}
+}
+
+
+acc1 = new Bank(1000);
+acc1.deposit(500);
+acc1.showBalance();
+acc1.withdraw(200);
+acc1.showBalance();
+
+
+
+
+
+class Circle {
+
+	constructor(r){
+		this.radius = r;
+		console.log("Constructor called...");
+	}
+
+	area() {
+		let area = Math.PI * this.radius * this.radius;
+		console.log(`Area of circle: ${area.toFixed(2)}`);
+	}
+
+	circumference() {
+		let crcm = 2 * Math.PI * this.radius;
+		console.log(`Circumference of circle: ${crcm.toFixed(2)}`);
+	}
+
+}
+
+
+</script>

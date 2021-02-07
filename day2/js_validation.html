@@ -1,0 +1,36 @@
+<html>
+	<body>
+		<form action="test_action.php">
+			First Name: <input type="text" id="fname" name="fname"/>
+			<span id="fname-err"></span>
+			<br/>
+			Last Name: <input type="text" id="lname" name="lname"/>
+			<span id="lname-err"></span>
+			<br/>
+			<input type="submit" onclick="return validate();" value="Submit" />
+		</form>
+	</body>
+	
+	<script>
+		function validate() {
+			var f_name = document.getElementById("fname").value;
+			var l_name = document.getElementById("lname").value;
+			
+			if(f_name === "") {
+				document.getElementById("fname-err").innerHTML = "First name is mandatory...";
+				return false;
+			} else {
+				document.getElementById("fname-err").innerHTML = "";
+			}
+			
+			if(l_name === "") {
+				document.getElementById("lname-err").innerHTML = "Last name is mandatory...";
+				return false;
+			} else {
+				document.getElementById("lname-err").innerHTML = "";
+			}
+			
+			return true;
+		}
+	</script>
+</html>

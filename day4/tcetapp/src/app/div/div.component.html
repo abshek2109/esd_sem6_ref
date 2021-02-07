@@ -1,0 +1,25 @@
+<form [formGroup]="divForm" (ngSubmit)=getDiv()>
+  Number1: <input type="text" formControlName="num1"/>
+  <br/>
+  Number2:<input type="text" formControlName="num2"/>
+  <br/>
+  <button (click)=loadData()>Load Data</button>
+  <input type="submit" value="Submit Form">
+</form>
+
+<div>
+  Form Values: {{ divForm.value | json}}
+</div>
+
+<div>
+  {{ result }}
+</div>
+
+<div *ngIf="result">
+  {{divForm.value.num1}} / {{divForm.value.num2}} = {{div}}
+</div>
+
+<!-- Create user component
+  add its entry in router-module.ts
+  create routerLink for the
+same. show it on browser -->

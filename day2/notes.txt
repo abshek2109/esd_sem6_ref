@@ -1,0 +1,23 @@
+https://us02web.zoom.us/meeting/register/tZEvcu6tpjsrGNaIX_HgNo-hxh3djiZo33OG 
+
+
+https://www.mongodb.com/try/download/community
+
+
+
+RDBMS vs Mongo DB
+
+database == database
+table == collection
+record == document
+column == field
+
+
+function find()
+display all records 
+
+function find(where)
+display records with where clause
+
+function find(where, projection) 
+display records with where clause and project only mentioned fields

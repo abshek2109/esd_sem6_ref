@@ -1,0 +1,39 @@
+<!-- {{empData | json}} -->
+<h3>Employee Module</h3>
+
+<form [formGroup]="empForm" (ngSubmit)=addEmp()>
+  Name: <input type="text" formControlName="name"/><br>
+  Age: <input type="text" formControlName="age"/><br>
+  City: <input type="text" formControlName="city"/><br>
+  Salary: <input type="text" formControlName="salary"/><br>
+  <input type="submit" value="Add Employee"/>
+  {{empForm.value | json}}
+</form>
+
+<br>
+<br>
+<br>
+
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>Salary</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emprec of empData">
+      <td>{{ emprec.name }}</td>
+      <td>{{ emprec.age }}</td>
+      <td>{{ emprec.city }}</td>
+      <td>{{ emprec.salary }}</td>
+      <td>
+        <a routerLink="edit/{{emprec._id}}">Edit</a>
+        <button (click)=deleteEmp(emprec._id)>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

@@ -1,0 +1,18 @@
+<div>
+  <input type="text" [(ngModel)]="num" (keyup)=getSqr()>
+  <br>
+  Square of {{ num }} is {{sqr}}
+</div>
+
+<!--
+  design getAdd() funciton and print addition of 2 numbers
+  in html
+  create button and apply click event
+-->
+
+<div>
+  <input type="text" [(ngModel)]="num1"><br>
+  <input type="text" [(ngModel)]="num2"><br>
+  <button (click)=getAdd() >Add</button>
+  Addition of {{ num1 }} and {{num2}} is {{addition}}
+ </div>

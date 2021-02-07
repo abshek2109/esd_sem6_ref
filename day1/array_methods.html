@@ -1,0 +1,75 @@
+<script>
+	var arr = [1, 2, 3, 4, 5]
+	
+	console.log(arr);
+	
+	console.log(`Array length: ${arr.length}`);
+	
+	/*
+	for(let i = 0; i < arr.length; i++) {
+		console.log(arr[i])
+	}
+	*/
+	
+	arr.forEach((x) => {
+		console.log(x * x);
+	});
+	
+	var arr2 = [6, 7, 8, 9, 10];
+	
+	var arr_merged = arr.concat(arr2);
+	
+	console.log(arr_merged);
+	
+	arr.push(6);
+	
+	console.log(`After push: ${arr}`);
+	
+	arr.pop();
+	arr.pop();
+	
+	console.log(`After Pop: ${arr}`);
+	
+	arr.shift();
+	console.log(`After Shift: ${arr}`);
+	
+	arr.unshift(12);
+	console.log(`After UnShift: ${arr}`);
+	
+	
+	arr = [1, 2, 3, 4, 5];
+	
+	sqr_arr = arr.map((x) => {
+		return x * x;
+	});
+	
+	console.log(sqr_arr);
+	
+	cube_arr = arr.map(x => x * x * x);
+	
+	console.log(cube_arr);
+	
+	total = arr.reduce((t, x) => {
+		console.log(`t = ${t}`);
+		console.log(`x = ${x}`);
+		return t + x;
+	}, 100);
+	
+	console.log(`Total of array elements ${total}`);
+	
+	
+	//prod = arr.reduce((t, x) => { return t * x});
+	
+	prod = arr.reduce((t, x) => t * x);
+	
+	console.log(`Product: ${prod}`);
+	
+	even_no = arr.filter((x) => {
+		return x%2 == 0;
+	});
+	
+	console.log(`Even Nos.: ${even_no}`);
+	
+	odd_no = arr.filter(x => x%2 != 0);
+	console.log(`Odd Nos.: ${odd_no}`);
+</script>

@@ -1,0 +1,42 @@
+<script>
+
+var name = "Thakur College";
+
+console.log(typeof(name));
+console.log(name);
+
+console.log(`Length of name is ${name.length}`);
+
+console.log(`Substring: ${name.substring(0,6)}`);
+
+console.log(`To Upper Case: ${name.toUpperCase()}`);
+
+console.log(`To Lower Case: ${name.toLowerCase()}`);
+
+console.log(`Exists: ${name.includes("Thakur")}`);
+
+console.log(`Dynamic Substring: ${name.substring(name.lastIndexOf(" ") + 1, name.length)}`);
+
+
+var link = "https://www.tcetmumbai.in/TNPhome.html"
+
+console.log(link.substring(link.lastIndexOf(".") + 1, link.length));
+console.log(link.substring(link.lastIndexOf("/") + 1, link.length));
+
+
+console.log(link.substring(link.indexOf(".") + 1, link.length));
+console.log(link.substring(link.indexOf("/") + 1, link.length));
+
+
+/*
+
+//${name.substring(name.lastIndexOf(" ") + 1, name.length);}
+
+var link = "https://www.tcetmumbai.in/TNPhome.html"
+
+1. html
+2. TNPhome.html
+
+*/
+
+</script>

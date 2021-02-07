@@ -1,0 +1,102 @@
+
+to start server
+mongod
+
+to start shell
+mongo
+
+show dbs;
+
+create/use database
+use db_name;
+
+show collections;
+
+db.createCollection("students");
+
+db.students.drop();
+
+show current database;
+db;
+
+drop database
+db.dropDatabase();
+
+
+insertOne
+db.students.insertOne({_id: 1, name: "shailesh"});
+
+insertMany
+db.students.insertMany([{_id: 2, name: "bagde"}, {_id: 3, name: "sheldon"}]);
+
+select all records
+db.students.find();
+
+select with projection
+db.students.find({},{_id: 0});
+db.students.find({},{name:0});
+
+exists operator
+db.students.find({age: {$exists: false}});
+
+============COMPARISION OPERATORS===========
+in operator
+db.students.find({_id: {$in: [2,3]}});
+
+not equal operator
+db.students.find({_id: {$ne: 2}});
+
+equal operator
+db.students.find({_id: {$eq: 2}});
+
+less than $lt
+
+less than equal $lte
+
+greather than $gt
+
+greater than equal $gte
+
+============LOGICAL OPERATORS=============
+
+$and
+db.students.find({$and : [{_id : {$gt:1}}, {_id: {$lt: 4}}]})
+
+$or
+db.students.find({$or : [{name : "bagde"}, {name: "shailesh"}]})
+
+=========================================
+
+like case insensitive
+db.students.find({name: /h/i})
+
+
+exact match
+db.students.find({name: /^BagDe$/i})
+
+============UPDATE=======================
+db.students.updateOne({_id: 1}, {$set : {age: 23}});
+db.students.updateMany({age : {$exists: false}}, { $set : {age : 25}})
+
+
+db.students.updateMany({}, {$set: {address: {city: "Mumbai", state: "MH"}}})
+db.students.updateOne({_id: 4}, { $set : {address : {city: "Nagpur"}}});
+
+
+Unset/Delete Fields
+db.students.updateMany({}, {$unset : {city: ""}});
+
+
+search within sub document
+db.students.find({address : { city : "Nagpur"}}).pretty();
+
+
+Delete Records
+db.students.deleteOne({ $or : [{ age : {$lt : 25}}, {name : "sheldon"}] })
+
+
+===================ORDER BY======================
+db.students.find().sort({name: -1})
+
+===================LIMIT=========================
+db.students.find().sort({name: -1}).limit(1)

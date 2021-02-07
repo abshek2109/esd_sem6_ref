@@ -1,0 +1,39 @@
+<html>
+	<body>
+	
+		<input type="text" id="number1" />
+		<div id="result">
+		</div>
+		
+		
+		<button id="add-btn">
+			Add
+		</button>
+	</body>
+	
+	<script>
+		
+		const number1Selector = document.getElementById("number1");
+		
+		number1Selector.addEventListener("keyup", function() {
+			var x = number1Selector.value;
+			document.getElementById("result").innerHTML = `Square of ${x} is ${x * x}`;
+		});
+	
+		/* 
+			WAP to read number from input box and alert its square 
+			use keyup event and addEventListener
+		*/
+	
+		var add_btn = document.getElementById("add-btn");
+		
+		add_btn.addEventListener("click", function() {
+			alert("Add button clicked...");
+		});
+		
+		add_btn.addEventListener("mouseover", function() {
+			alert("Add button hovered...");
+		});
+	
+	</script>
+</html>

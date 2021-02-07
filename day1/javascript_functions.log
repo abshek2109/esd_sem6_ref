@@ -1,0 +1,52 @@
+console.log("Hello World");
+VM751:1 Hello World
+undefined
+console.log(10);
+VM797:1 10
+undefined
+alert("hi...");
+undefined
+confirm("Are you sure you want to delete this record?");
+true
+confirm("Are you sure you want to delete this record?");
+false
+flag = confirm("Are you sure you want to delete this record?");
+true
+console.log(flag);
+VM1042:1 true
+undefined
+console.error("variable not found");
+VM1125:1 variable not found
+(anonymous) @ VM1125:1
+undefined
+console.warning("this is test warning");
+VM1217:1 Uncaught TypeError: console.warning is not a function
+    at <anonymous>:1:9
+(anonymous) @ VM1217:1
+m=_b,_tp:327 POST https://play.google.com/log?format=json&hasfast=true net::ERR_BLOCKED_BY_CLIENT
+_.Il.send @ m=_b,_tp:327
+_.Ml @ m=_b,_tp:325
+_.iE @ m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,rE6Mgd,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,mdR7q,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,MI6k7c,kjKdXe,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,hKSk3e,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,tn2Ukb,UgAtXe,aDfbSd,yA4AGd,pjICDe:518
+_.FE.flush @ m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,rE6Mgd,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,mdR7q,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,MI6k7c,kjKdXe,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,hKSk3e,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,tn2Ukb,UgAtXe,aDfbSd,yA4AGd,pjICDe:543
+(anonymous) @ m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,rE6Mgd,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,mdR7q,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,MI6k7c,kjKdXe,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,hKSk3e,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,tn2Ukb,UgAtXe,aDfbSd,yA4AGd,pjICDe:1242
+e.j @ m=_b,_tp:135
+zg @ m=_b,_tp:138
+vg @ m=_b,_tp:138
+_.gg.$j @ m=_b,_tp:138
+eg @ m=_b,_tp:130
+Promise.then (async)
+$f @ m=_b,_tp:130
+dg @ m=_b,_tp:130
+wg @ m=_b,_tp:137
+qg @ m=_b,_tp:135
+pg @ m=_b,_tp:136
+_.gg.then @ m=_b,_tp:134
+_.OF @ m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,rE6Mgd,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,mdR7q,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,MI6k7c,kjKdXe,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,hKSk3e,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,tn2Ukb,UgAtXe,aDfbSd,yA4AGd,pjICDe:1241
+TI @ m=Wt6vjf,_latency,FCpbqb,WhJNk:27
+c @ m=_b,_tp:433
+console.warn("this is test warning");
+VM1228:1 this is test warning
+(anonymous) @ VM1228:1
+undefined
+confirm("Are you sure you want to delete this record?");
+true

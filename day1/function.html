@@ -1,0 +1,59 @@
+<script>
+
+function add() {
+	var x = 10;
+	var y = 20;
+	/*
+		let y = 10;
+		let y = 20;
+		Identifier 'y' has already been declared
+		
+	*/
+	console.log(`${x} + ${y} = ${x+y}`);
+}
+
+function addFun(x, y) {
+	return x + y;
+}
+
+addFun(4,5);
+
+//callback function: function as an argument
+
+arr = [1,2,3,4,5]
+
+callbackFun = function (x) {
+	return x * x;
+}
+
+sqr_arr = arr.map(callbackFun);
+
+console.log(`Sqr Arr: ${sqr_arr}`);
+
+
+cub_arr = arr.map((x) => x * x * x);
+
+console.log(cub_arr);
+
+
+sub = function (x, y) {
+	return Math.abs(x - y);
+}
+
+mul = (x, y) => x * y;
+
+//parameter and argument
+
+/*
+
+add(int x, int y) {
+	return x + y;
+}
+
+add(int x, int y, int z) {
+	return x + y + z;
+}
+
+*/
+
+</script>

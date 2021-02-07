@@ -1,0 +1,20 @@
+x = 10;
+10
+typeof(x)
+"number"
+y = 15.50
+15.5
+typeof(y)
+"number"
+name = "tcet"
+"tcet"
+typeof(name)
+"string"
+flag = true;
+true
+typeof(flag)
+"boolean"
+typeof("string")
+"string"
+typeof(false)
+"boolean"

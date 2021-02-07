@@ -1,0 +1,256 @@
+===============================================
+=============NODE CUSTOM MODULE================
+===============================================
+index.js
+===============================================
+var mymath = require("./mymodule")
+
+console.log(mymath.add(5,6));
+console.log(mymath.sub(5,6));
+console.log(mymath.mul(5,6));
+console.log(mymath.div(5,6));
+console.log(mymath.mod(5,6));
+
+
+cobj = new mymath.MyCircle(5);
+cobj.area();
+
+===============================================
+mymodule.js
+===============================================
+exports.add = (x, y) => x + y;
+exports.sub = (x, y) => x - y;
+exports.mul = (x, y) => x * y;
+exports.div = (x, y) => x / y;
+exports.mod = (x, y) => x % y;
+
+exports.MyCircle = class {
+
+    constructor(r) {
+        this.radius = r;
+        console.log("Hello I am My Circle Constructor...");
+    }
+
+    area() {
+        let area = Math.PI * this.radius * this.radius;
+        console.log(`Area: ${area.toFixed(2)}`);
+    }
+
+}
+
+===============================================
+===============NODE http MODULE================
+===============================================
+index.js
+===============================================
+var http = require("http")
+
+http.createServer((req, res) => {
+	// res.writeHead('Content-Type', 'text/plain');
+    // res.writeHead('Content-Type', 'application/json');
+    res.writeHead(200, {'Content-Type' : 'text/html'});
+    res.write("this is line 1....</br>");
+
+    console.log(req.url);
+
+    if(req.url == "/") {
+        res.write("Home req hit</br>")
+    } else 
+
+    if(req.url == "/teacher") {
+        res.write("Teacher req hit</br>")
+    } else 
+
+    if(req.url == "/student") {
+        res.write("Student req hit</br>")
+    } else 
+
+    {
+        res.end("Page Not Found....");
+    }
+
+    res.end("hello world....");
+}).listen(8989, () => {
+    console.log("listening at port 8989...")
+});
+
+
+===============================================
+================EXPRESS ROUTING================
+===============================================
+index.js
+===============================================
+var express = require("express")
+var app = express();
+
+app.get("/", (req, res) => {
+    // res.setHeader('Content-Type', 'text/plain');
+    // res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'text/html');
+    res.send("Home Page");
+})
+
+app.get("/student", (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Student GET Request"}
+    res.send(JSON.stringify(data))
+})
+app.post("/student", (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Student post Request"}
+    res.send(JSON.stringify(data))
+})
+app.put("/student", (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Student put Request"}
+    res.send(JSON.stringify(data))
+})
+app.delete("/student", (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Student delete Request"}
+    res.send(JSON.stringify(data))
+})
+
+
+app.route("/teacher")
+.get((req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Teacher get Request"}
+    res.send(JSON.stringify(data))
+})
+.post((req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Teacher post Request"}
+    res.send(JSON.stringify(data))
+})
+.put((req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Teacher put Request"}
+    res.send(JSON.stringify(data))
+})
+.delete((req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = { "result" : "Teacher delete Request"}
+    res.send(JSON.stringify(data))
+})
+
+app.listen(8989, () => {
+    console.log("Listening at port 8989");
+})
+
+
+===============================================
+============ EXPRESS MODULAR ROUTING  =========
+===============================================
+index.js
+===============================================
+var express = require("express");
+var app = express();
+var home = require("./home")
+var student = require("./student")
+var teacher = require("./teacher")
+
+app.use("/", home);
+app.use("/student", student);
+app.use("/teacher", teacher);
+
+app.use(function(req, res, next) {
+    res.status(404);
+    res.send('404: File Not Found');
+});
+
+app.listen(8989, () => {
+    console.log("Listening at port 8989");
+});
+
+===============================================
+student.js
+===============================================
+const express = require("express");
+const router = express.Router();
+
+router.route("/")
+.get((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("student listing");
+})
+
+.post((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("student post");
+})
+
+.put((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("student put");
+})
+
+.delete((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("student delete");
+})
+
+module.exports = router
+
+===============================================
+teacher.js
+===============================================
+const express = require("express");
+const router = express.Router();
+
+router.route('/')
+.get((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("teachers listing");
+})
+
+.post((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("teachers post");
+})
+
+.put((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("teachers put");
+})
+
+.delete((req, res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.send("teachers delete");
+})
+
+module.exports = router;
+
+
+===============================================
+============ EXPRESS READ DATA ================
+===============================================
+index.js
+===============================================
+const express = require("express");
+const app = express();
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
+
+app.route("/")
+.get((req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = req.query;
+    res.send(JSON.stringify(data));
+})
+.post((req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = req.body;
+    res.send(JSON.stringify(data));
+})
+.put((req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    data = req.body;
+    res.send(JSON.stringify(data));
+})
+
+app.listen(8989, () => {
+    console.log("Listening at port 8989");
+});

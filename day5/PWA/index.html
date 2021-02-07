@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#009578">
+        <title>PWA</title>
+        <link rel="stylesheet" href="src/master.css">
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="images/logo_2.jpg">
+    </head>
+    <body>
+        <h3>Progressive Web App</h3>
+        <script src="src/index.js"></script>
+        <h4>Addition</h4>
+
+    <label for="num1">Enter 1st Number:</label><br>
+    <input type="text" id="num1" name="num1"><br>
+    <br>
+
+    <label for="num2">Enter 2nd Number:</label><br>
+    <input type="text" id="num2" name="num2"><br><br>
+
+    <button type="button" name="button" onclick="addition()">Add</button>
+
+    <div>
+        <h4>Result: <span id="res"> </span></h4>
+    </div>
+
+    <script>
+        function addition() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+
+            var z = x + y;
+
+            document.getElementById("res").innerHTML = z;
+        }
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<p>Update Employee </p>
+<form [formGroup]="empForm" (ngSubmit)=updateEmp()>
+
+  Name: <input type="text" formControlName="name"/><br>
+  Age: <input type="text" formControlName="age"/><br>
+  City: <input type="text" formControlName="city"/><br>
+  Salary: <input type="text" formControlName="salary"/><br>
+  <input type="submit" value="Update Employee"/>
+  <!-- {{empForm.value | json}} -->
+</form>

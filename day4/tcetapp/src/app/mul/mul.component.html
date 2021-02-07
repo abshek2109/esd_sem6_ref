@@ -1,0 +1,10 @@
+<form [formGroup]="mulForm" (ngSubmit)=getMul()>
+  Number1: <input type="text" formControlName="num1"/>
+  <br/>
+  Number2:<input type="text" formControlName="num2"/>
+  <br/>
+  <input type="submit" value="Submit Form">
+  Form Values: {{ mulForm.value | json}}
+</form>
+
+{{mulForm.value.num1}} * {{mulForm.value.num2}} = {{mul}}

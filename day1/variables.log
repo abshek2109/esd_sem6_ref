@@ -1,0 +1,78 @@
+x = 10
+10
+console.log(x)
+VM1324:1 10
+undefined
+y = 20
+20
+z = x + y;
+30
+console.log(z);
+VM1719:1 30
+undefined
+x = 50
+50
+z = x + y;
+70
+z = 10 + y;
+30
+z = 50 + y;
+70
+z = x + y;
+70
+x = 10
+10
+delete x;
+true
+let y = 20;
+undefined
+delete y;
+false
+var z = 30;
+undefined
+delete z;
+true
+var testvar = 30;
+undefined
+delete testvar;
+false
+var testvar = 30;
+undefined
+console.log(testvar)
+VM2062:1 30
+undefined
+var x = 10;
+undefined
+var x = 20;
+undefined
+let y = 20;
+undefined
+let y = 40;
+undefined
+x 
+20
+var x = 10;
+undefined
+let x = 30;
+VM2243:1 Uncaught SyntaxError: Identifier 'x' has already been declared
+const PI = 3.14
+undefined
+PI
+3.14
+PI = 25
+VM2319:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM2319:1
+email_id = "abc@gmail.com";
+"abc@gmail.com"
+emailId = "abc@gmail.com";
+"abc@gmail.com"
+EmailId = "jfakjdf";
+"jfakjdf"
+console.log(PI);
+VM2517:1 3.14
+undefined
+PI = 25
+VM2537:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM2537:1

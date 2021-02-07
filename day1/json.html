@@ -1,0 +1,23 @@
+<script>
+
+var json1 = {
+	account_no : 12345,
+	balance : 5000
+}
+var json2 = {
+	account_no : 12342,
+	balance : 7000
+}
+var json3 = {
+	account_no : 12343,
+	balance : 8000,
+	name: "Rakesh"
+}
+
+var arr_of_json = [json1, json2, json3];
+
+arr_of_json.forEach((obj) => {
+	console.log(obj.balance);
+})
+
+</script>
